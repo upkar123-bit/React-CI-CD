@@ -1,18 +1,19 @@
 name: "CI CD pipeline / workflows"
 
 on:
- push:
-    branches:
-       - master
-       - main   
+    push:
+         branches:
+         - master
+         - main   
 
 jobs:
-    buil-and-test:
+    build-and-test:
         runs-on: ubuntu-latest
 
         steps:
             - name: "setup node js"
-             uses: actions/setup-node@v4
-
+              uses: actions/setup-node@v4
+              with: 
+                node-version: '21'
 
 
